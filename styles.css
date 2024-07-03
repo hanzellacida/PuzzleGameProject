@@ -1,0 +1,67 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f0f8ff;
+}
+
+#game {
+    margin: 20px auto;
+    width: 320px;
+}
+
+#logo {
+    width: 100px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+#score {
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#board {
+    display: grid;
+    grid-template-columns: repeat(8, 40px);
+    grid-gap: 2px;
+    margin: 0 auto;
+}
+
+.cell {
+    width: 40px;
+    height: 40px;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.cell.match {
+    animation: matchAnimation 0.5s;
+}
+
+@keyframes matchAnimation {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.5); }
+    100% { transform: scale(1); }
+}
+
+#restart {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+#leaderboard {
+    margin-top: 20px;
+}
+
+#leaderboard div {
+    margin-bottom: 5px;
+    font-size: 16px;
+}
